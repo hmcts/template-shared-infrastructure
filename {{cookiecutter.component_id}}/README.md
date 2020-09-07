@@ -6,6 +6,7 @@ Contains the the product infrastructure components per Environment for {{ cookie
 {% if cookiecutter.enable_app_insights == 'Yes' %}- Application Insights{% endif %}
 {% if cookiecutter.enable_key_vault == 'Yes' %}- Azure Key Vault{% endif %}
 
+
 ## Tooling
 
 All infrastructure is created via Terraform, using reusable modules.
