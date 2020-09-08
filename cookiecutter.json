@@ -4,6 +4,6 @@
   "description": "Product infrastructure for {{ cookiecutter.product }}",
   "aad_group_object_id": "",
   "owner": "",
-  "enable_app_insights": "Yes",
-  "enable_key_vault": "No"
+  "enable_app_insights": "True",
+  "enable_key_vault": "False"
 }
