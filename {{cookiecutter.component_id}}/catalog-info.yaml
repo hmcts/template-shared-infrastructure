@@ -11,6 +11,6 @@ metadata:
     - shared-infra
     - {{ cookiecutter.product }}
 spec:
-  type: infrastructure
+  type: service
   lifecycle: experimental
   owner: {{ cookiecutter.owner }}
