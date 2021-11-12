@@ -1,10 +1,10 @@
-# {{ cookiecutter.product }} product infrastructure
+# ${{ values.product }} product infrastructure
 
-Contains the the product infrastructure components per Environment for {{ cookiecutter.product }}
+Contains the the product infrastructure components per Environment for ${{ values.product }}
 
 - Resource Group
-{% if cookiecutter.enable_app_insights == 'Yes' %}- Application Insights{% endif %}
-{% if cookiecutter.enable_key_vault == 'Yes' %}- Azure Key Vault{% endif %}
+{% if values.enable_app_insights %}- Application Insights{% endif %}
+{% if values.enable_key_vault %}- Azure Key Vault{% endif %}
 
 ## Tooling
 
