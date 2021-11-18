@@ -13,7 +13,6 @@ metadata:
 spec:
   owner: dts_platform_operations
   type: service
-  templater: cookiecutter
   parameters:
     - title: Provide some simple information
       required:
