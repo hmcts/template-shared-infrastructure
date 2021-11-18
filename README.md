@@ -2,47 +2,7 @@
 
 ## Template development
 
-We are using [cookiecutter](https://cookiecutter.readthedocs.io/) for the template.
+We are using [nunjucks](https://mozilla.github.io/nunjucks/) for the template powered by Backstage software templates.
 
-You will need to install it from your package manager of choice.
-
-On mac:
-
-```command
-$ brew install cookiecutter
-```
-
-Create a parent directory for your template generation and cd into it:
-
-```command
-$ mkdir templates && cd templates
-```
-
-Run:
-
-```
-$ cookiecutter ../template-shared-infrastructure/
-```
-
-You will be prompted to fill out any parameters, pick the appropriate values.
-
-```command
-$ cookiecutter ../template-shared-infrastructure/
-component_id []: rpetemplate
-product [rpetemplate]:
-description [We promise to update this description]:
-aad_group_name []:
-owner []:
-enable_app_insights [True]:
-enable_key_vault [False]:
-storePath [https://github.com/hmcts/???]:
-```
-
-You should now have a templated repo in a subfolder based on the `component_id` that was chosen.
-
-For further iterations you can pass the `--replay` flag so that you don't need to add the parameters all the time:
-
-```command
-$ COMPONENT_ID=rpetemplate # the component_id you set earlier
-$ rm -rf ${COMPONENT_ID} && cookiecutter --replay ../template-shared-infrastructure/
-```
+Currently there's no way to run it easily apart from via Backstage.
+Follow https://github.com/backstage/backstage/issues/6568 for better solutions
