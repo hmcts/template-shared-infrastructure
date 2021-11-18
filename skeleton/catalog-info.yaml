@@ -15,6 +15,6 @@ metadata:
       icon: chat
 spec:
   type: service
+  system: ${{ values.product }}
   lifecycle: experimental
   owner: ${{ values.owner }}
-  
