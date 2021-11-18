@@ -5,7 +5,7 @@ metadata:
   description: ${{ values.description }}
   annotations:
     # This must match folder-name/job-name in Jenkins.
-    jenkins.io/github-folder: 'HMCTS_${{ values.product }}/${{ values.product }}-product-infrastructure'
+    jenkins.io/job-full-name: cft:HMCTS_${{ values.product }}/${{ values.destination.repo }}
     github.com/project-slug: '${{ values.destination.owner }}/${{ values.destination.repo }}'
   tags:
     - terraform
@@ -15,6 +15,6 @@ metadata:
       icon: chat
 spec:
   type: service
+  system: ${{ values.product }}
   lifecycle: experimental
   owner: ${{ values.owner }}
-  
