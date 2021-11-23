@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: "${{ values.product }}-product-infrastructure"
-  description: ${{ values.description }}
+  description: ${{ values.description or 'Product infrastructure for ' + values.product }}
   annotations:
     # This must match folder-name/job-name in Jenkins.
     jenkins.io/job-full-name: cft:HMCTS_${{ values.product }}/${{ values.destination.repo }}
