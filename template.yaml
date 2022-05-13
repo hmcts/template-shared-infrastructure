@@ -19,6 +19,7 @@ spec:
         - component_id
         - owner
         - slack_contact_channel
+        - github_topic
       properties:
         component_id:
           title: Product
@@ -57,6 +58,11 @@ spec:
           ui:options:
             allowedKinds:
               - Group
+        github_topic:
+          title: Github Topic
+          default: jenkins-cft-j-z
+          type: string
+          description: GitHub Topic added in order for Jenkins to find the repository when it scans GitHub, alphabetically grouped i.e. jenkins-cft-a-c, jenkins-cft-d-i, jenkins-cft-j-z
     - title: Choose a location
       required:
         - repoUrl
@@ -84,6 +90,7 @@ spec:
           owner: '${{ parameters.owner }}'
           destination: '${{ parameters.repoUrl | parseRepoUrl }}'
           slack_contact_channel: ${{ parameters.slack_contact_channel }}
+          github_topics: ${{ parameters.github_topic }}
     - id: publish
       name: Publish
       action: publish:github
@@ -96,6 +103,7 @@ spec:
         repoVisibility: public
         topics:
           - ${{ parameters.component_id }}
+          - ${{ parameters.github_topic }}
     - id: register
       name: Register
       action: catalog:register
